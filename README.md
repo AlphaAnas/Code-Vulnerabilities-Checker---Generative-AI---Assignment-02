@@ -1,0 +1,1 @@
+# Code-Vulnerabilities-Checker---Generative-AI---Assignment-02
