@@ -23,7 +23,7 @@ export const useChatContext = () => {
 const WELCOME_MESSAGE: Message = {
   id: "welcome",
   role: "assistant",
-  content: `# Welcome to Security Helper
+  content: `# Welcome to Secur-ingo!
 
 Security analysis for your code and applications.
 

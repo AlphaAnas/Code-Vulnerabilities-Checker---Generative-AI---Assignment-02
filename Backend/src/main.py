@@ -28,7 +28,7 @@ app.include_router(chat_router)
 @app.get("/", tags=["Root"])
 async def root():
     return {
-        "message": "LLM Security Helper App",
+        "message": "LLM Secur-ingo App",
         "version": "1.0.0",
         "endpoints": {
             "docs": "/docs"

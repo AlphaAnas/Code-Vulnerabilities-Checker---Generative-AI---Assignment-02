@@ -1,4 +1,4 @@
-# Code Vulnerabilities Checker - LLM Security Helper
+# Code Vulnerabilities Checker - Secur-ingo
 
 An AI-powered security analysis chatbot that helps developers identify security vulnerabilities in code and GenAI/LLM applications. The application provides comprehensive security analysis by mapping findings to industry-standard security frameworks including OWASP Top 10, OWASP Top 10 for LLM Applications, and MITRE ATLAS.
 
