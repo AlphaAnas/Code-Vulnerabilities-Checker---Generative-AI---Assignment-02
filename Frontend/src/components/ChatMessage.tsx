@@ -105,22 +105,22 @@ export const ChatMessage = ({ message, index }: ChatMessageProps) => {
                     code: ({ className, children }) => {
                       const isInline = !className;
                       return isInline ? (
-                        <code className="bg-gray-800 px-2.5 py-1.5 rounded text-base font-mono text-cyan-300 border border-gray-700">
+                        <code className="bg-gray-700 px-2.5 py-1.5 rounded text-base font-mono text-cyan-300 border border-gray-600">
                           {children}
                         </code>
                       ) : (
-                        <code className="block bg-gray-950 p-5 rounded-lg border border-gray-700 overflow-x-auto text-base font-mono text-green-300 my-5 shadow-md">
+                        <code className="block bg-gray-800 p-5 rounded-lg border border-gray-600 overflow-x-auto text-base font-mono text-gray-100 my-5 shadow-md">
                           {children}
                         </code>
                       );
                     },
                     pre: ({ children }) => (
-                      <pre className="bg-gray-950 border border-gray-700 rounded-lg overflow-hidden my-5 shadow-md">
+                      <pre className="bg-gray-800 border border-gray-600 rounded-lg overflow-hidden my-5 shadow-md">
                         {children}
                       </pre>
                     ),
                     blockquote: ({ children }) => (
-                      <blockquote className="border-l-4 border-gray-600 pl-5 italic text-gray-300 my-5 bg-gray-800/30 py-3 rounded-r">
+                      <blockquote className="border-l-4 border-gray-500 pl-5 italic text-gray-300 my-5 bg-gray-800/50 py-3 px-4 rounded-r">
                         {children}
                       </blockquote>
                     ),

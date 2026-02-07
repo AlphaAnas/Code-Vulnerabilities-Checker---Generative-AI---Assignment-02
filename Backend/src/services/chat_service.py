@@ -34,7 +34,7 @@ client = openai.OpenAI(api_key=GROQ_API_KEY,
 
 
 def call_model(
-    user_prompt, file_path=None, retry_attempts=3, base_delay=2
+    user_prompt, retry_attempts=3, base_delay=2
 ):
     """Process an image using Groq's vision API with retry logic."""
 
@@ -42,7 +42,6 @@ def call_model(
         try:
             response = client.responses.create(
                 model = MODEL_ID,
-
                 input=
                 
                 [

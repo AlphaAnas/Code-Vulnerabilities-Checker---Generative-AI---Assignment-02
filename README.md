@@ -2,6 +2,9 @@
 
 An AI-powered security analysis chatbot that helps developers identify security vulnerabilities in code and GenAI/LLM applications. The application provides comprehensive security analysis by mapping findings to industry-standard security frameworks including OWASP Top 10, OWASP Top 10 for LLM Applications, and MITRE ATLAS.
 
+## Demo
+You can watch a demo of the application in action below. The demo showcases both code vulnerability analysis and application specification analysis modes, highlighting the detailed security reports and framework mappings provided by the system.
+![Demo](./demo.mp4)
 ## Features
 
 - **Code Security Analysis**: Paste vulnerable code snippets and receive detailed security vulnerability reports with recommended fixes
