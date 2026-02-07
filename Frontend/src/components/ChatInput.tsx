@@ -20,26 +20,23 @@ export const ChatInput = () => {
   const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
-      handleSubmit(e);
+      handleSubmit(e as any);
     }
   };
 
   return (
-    <div className="border-t border-cyan-500/30 bg-black/40 backdrop-blur-md p-4">
-      <form onSubmit={handleSubmit} className="max-w-4xl mx-auto">
-        <div className="relative flex items-end space-x-2">
-          <div className="flex-1 relative">
-            <textarea
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder="Enter your code or specifications... (Shift+Enter for new line)"
-              rows={3}
-              disabled={isLoading}
-              className="w-full px-4 py-3 pr-12 rounded-lg bg-gray-900/50 border border-cyan-500/30 text-cyan-100 placeholder-cyan-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/50 resize-none transition-all disabled:bg-gray-900/30 disabled:cursor-not-allowed"
-            />
-          </div>
-
+    <div className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+      <form onSubmit={handleSubmit} className="max-w-2xl mx-auto px-4 py-4 sm:px-6 md:px-8">
+        <div className="flex gap-3">
+          <textarea
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Message..."
+            rows={1}
+            disabled={isLoading}
+            className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 resize-none transition-all disabled:opacity-50"
+          />
           <motion.button
             type="submit"
             disabled={!input.trim() || isLoading}
@@ -47,17 +44,13 @@ export const ChatInput = () => {
             whileTap={{ scale: input.trim() && !isLoading ? 0.95 : 1 }}
             className={`p-3 rounded-lg transition-all ${
               input.trim() && !isLoading
-                ? "bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70"
-                : "bg-gray-800 text-gray-600 cursor-not-allowed"
+                ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-200"
+                : "bg-gray-200 dark:bg-gray-800 text-gray-400 dark:text-gray-600 cursor-not-allowed"
             }`}
           >
             <Send className="w-5 h-5" />
           </motion.button>
         </div>
-
-        <p className="text-xs text-cyan-500/60 mt-2 text-center">
-          Secure vulnerability analysis • Press Enter to send
-        </p>
       </form>
     </div>
   );

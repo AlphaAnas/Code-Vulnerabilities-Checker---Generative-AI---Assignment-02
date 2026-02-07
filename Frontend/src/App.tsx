@@ -36,10 +36,10 @@ const ChatInterface = () => {
               <Shield className="w-6 h-6 text-white" />
             </motion.div>
             <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Security Helper
               </h1>
-              <p className="text-xs text-cyan-400/70">
+              <p className="text-sm text-cyan-400/70">
                 Vulnerability Analysis System
               </p>
             </div>
@@ -52,7 +52,7 @@ const ChatInterface = () => {
             }}
             whileTap={{ scale: 0.95 }}
             onClick={clearMessages}
-            className="flex items-center space-x-2 px-4 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded-lg transition-all text-sm font-medium text-cyan-400"
+            className="flex items-center space-x-2 px-4 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 rounded-lg transition-all text-base font-medium text-cyan-400"
           >
             <RefreshCw className="w-4 h-4" />
             <span className="hidden sm:inline">New Chat</span>
