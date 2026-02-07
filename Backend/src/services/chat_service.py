@@ -7,14 +7,14 @@ import os
 #     NotFoundError,
 #     RateLimitError,
 # )
-
+from src.config.system_prompt import SYSTEM_PROMPT
+from src.config.settings import MODEL_ID
 import openai
 
 import time
 import logging
 import base64
 
-from config.settings import MODEL_ID
 from dotenv import load_dotenv
 
 
@@ -34,7 +34,7 @@ client = openai.OpenAI(api_key=GROQ_API_KEY,
 
 
 def call_model(
-    system_prompt, user_prompt, retry_attempts=3, base_delay=2
+    user_prompt, file_path=None, retry_attempts=3, base_delay=2
 ):
     """Process an image using Groq's vision API with retry logic."""
 
@@ -49,7 +49,7 @@ def call_model(
 
                     {
                         "role": "system",
-                        "content" : system_prompt
+                        "content" : SYSTEM_PROMPT
 
                     },
                     {
@@ -60,7 +60,7 @@ def call_model(
                 ],
             )
 
-            # print("DEBUG RESPONSE:", response)
+   
 
             response_id = response.id
             message_id = [message.id for message in response.output if message.type == "message"][0]
